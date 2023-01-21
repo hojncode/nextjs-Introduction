@@ -1,15 +1,7 @@
-import NavBar from "@/components/NavBar";
-
 export default function Home() {
   return (
     <div>
-      <NavBar />
-      <h1>Hello</h1>
-      <style jsx>{`
-        div {
-          color: teal;
-        }
-      `}</style>
+      <h1>Home</h1>
     </div>
   );
 }
