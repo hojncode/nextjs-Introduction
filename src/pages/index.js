@@ -13,11 +13,7 @@ export default function Home() {
       // );
       // const json = await response.json();
       //! 위와 아래 promise는 같음. 형식 통일 유무.
-      const { results } = await (
-        await fetch(
-          `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`
-        )
-      ).json();
+      const { results } = await (await fetch(`/api/movies`)).json();
       // console.log(data.results); //==> data의 results 를 객체 할당 으로 위 api 함수로 가져옴.
       setMovies(results);
       // console.log(data);
