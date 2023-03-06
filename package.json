@@ -1,12 +1,14 @@
 {
   "name": "nextjs-1st",
+  "homepage": "https://hojncode.github.io/nextjs-Introduction/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "next build && next export && touch out/.nojekyll && git add -f out/ && git commit -m 'deploy to gh-pages' && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
     "@next/font": "13.1.4",

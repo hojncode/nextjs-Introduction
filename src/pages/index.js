@@ -94,7 +94,7 @@ export default function Home({ results }) {
 //getServerSideProps 이름은 바꾸면 안된다. 이 코드는 오로지 server 쪽에서만 동작한다.(api를 여기에 작성하면 클라이언트에서 절대 볼 수 없다.)
 export async function getServerSideProps() {
   const { results } = await (
-    await fetch(`http://localhost:3000/api/movies`)
+    await fetch(`http://localhost:3001/api/movies`)
   ).json();
   return {
     props: {
